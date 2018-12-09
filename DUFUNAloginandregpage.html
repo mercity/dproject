@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login and reg.form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <style>
+        body{
+            background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(image1.jpg);
+            height: 100vh;
+            background-size: center;
+            background-position: center;
+        
+        }
+        .login-page{
+            width: 500px;
+            padding: 10% 0 0;
+            margin: auto;          
+        }
+        .form{
+            position: relative;
+            z-index: 1;
+            background: brown;
+            max-width: 360px;
+            margin: 0 auto 100px;
+            padding: 45px;
+            text-align: center;   
+        }
+        .form input{
+            font-family: "Roboto", sans-serif;
+            outline: 1;
+            background: darkred;
+            width: 100%;
+            border: 0;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        .form button{
+            font-family: "Roboto", sans-serif;
+            text-transform: uppercase;
+            outline: 0;
+            background: green;
+            width: 100%;
+         border: 0;
+            padding: 15px;
+            color: brown;
+            font-size: 14px;
+            cursor: pointer;
+                    }
+                    .form button:hover,.form button:active{
+                        background: brown;
+                    }
+                    .form .message{
+                        margin: 15px 0 0;
+                        color: aliceblue;
+                        font-size: 12px;
+                    }
+                    .form .message a{
+                        color: darkblue;
+                        text-decoration: none;
+                    }
+                    .form .register-form{
+                        display: none;
+                    }
+                    h1{
+                        text-align: center;
+                        background-color: brown;
+                        font: arial;
+                
+                    }
+                    p{
+                        text-align: center;
+                    }
+    </style>
+    <body>
+        <h1><strong>Mercy Diet</strong></h1>
+        <p>Have you Signed up?</p><br/>
+        <p>Sign up or Sign in here to enjoy Mercy Diet Menus.</p>
+
+        <div class="login-page">
+            <div class="form">
+                <form class="register-form">
+                    <form method="POST" action="login-page">
+                        <form action="insert.php" method="POST">
+                    <fieldset>
+                    <legend>Sign Up Form:</legend>
+                    <input type="text" placeholder="First name" required/>
+                    <input type="text" placeholder="Last name" required/>
+                    <input type="text" placeholder="Password" required/>
+<input type="text" placeholder="Email id" required/>
+<input type="phone" placeholder="+234*****" required/>
+<table>
+<tr>
+<td>Gender :
+</td>
+<td>
+<input type="radio" name="Gender" value="m" required/>Male
+                    <input type="radio" name="Gender" value="f" required/>Female
+                    </td>
+                    </tr>
+                </table>
+<input type="text" placeholder="Address" required/>
+<input type="text" placeholder="City" required/>
+<input type="text" placeholder="State" required/>
+<button>Sign up</button>
+            </fieldset>
+            </form>
+<p class="message">Already Signed up? <a href="#">Sign in</a>
+</p>
+
+                </form>
+                
+<form>
+                <form class="login-form">
+                        <form method="POST" action="login.php">
+                    <fieldset>
+                        <legend>Sign In Form</legend>
+                    <input type="text" placeholder="Email id"/>
+                    <input type="text" placeholder="Password"/>
+                    <button>Sign in</button>
+                    </fieldset>
+                    </form>
+                    <p class="message">Not Signed up? <a href="#">Sign up</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <script src='https://code.jquery.com/jquery-3.3.1.min.js'>
+        </script>
+        <script>
+            $('.message a').click(function(){
+                $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+            })
+        </script>
+    </body>
+</html>
